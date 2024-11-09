@@ -1,0 +1,137 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffedf3;
+    padding: 10px;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Ajuste da largura para telas maiores */
+    width: 100%; /* Permite que o container ocupe 100% da largura em telas pequenas */
+}
+
+/* Títulos */
+h1 {
+    color: #ff4081;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.poem h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Poema */
+.poem {
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    display: none;
+}
+
+.poem p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Botões */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sendMessage {
+    background-color: #ff4081;
+}
+
+#sendMessage:hover {
+    background-color: #e91e63;
+}
+
+/* Animação para o botão de mensagem */
+.moving-button {
+    animation: move 1s ease-in-out infinite;
+}
+
+@keyframes move {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+#showPoem {
+    background-color: #4caf50;
+}
+
+#showPoem:hover {
+    background-color: #388e3c;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .poem {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .poem h2 {
+        font-size: 1.5rem;
+    }
+
+    .poem p {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 85%;
+        max-width: 280px;
+    }
+}
